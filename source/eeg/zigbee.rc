@@ -1,0 +1,481 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "icons\\zigbee.ico"
+IDI_BATLOW1             ICON                    "icons\\batlow1.ico"
+IDI_BATFULL             ICON                    "icons\\batfull.ico"
+IDI_BATLOW2             ICON                    "icons\\batlow2.ico"
+IDI_EXIT                ICON                    "icons\\Toolbar 2\\exit.ico"
+IDI_PARAMETERS          ICON                    "icons\\Toolbar 2\\parameters.ico"
+IDI_PATIENT             ICON                    "icons\\Toolbar 2\\patient.ico"
+IDI_RECORDING           ICON                    "icons\\Toolbar 2\\recording.ico"
+IDI_ANNOTATIONS         ICON                    "icons\\Toolbar 2\\annotations.ico"
+IDI_RECORD              ICON                    "icons\\Toolbar 2\\Record.ico"
+IDI_STOP                ICON                    "icons\\Toolbar 2\\Stop.ico"
+IDI_ALERT               ICON                    "icons\\Toolbar 2\\alert.ico"
+IDI_CHECK               ICON                    "icons\\Toolbar 2\\checkmark.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TRAFFIC_GRN         BITMAP                  "icons\\Toolbar 2\\traffic_grn.bmp"
+IDB_TRAFFIC_RED         BITMAP                  "icons\\Toolbar 2\\traffic_red.bmp"
+IDB_TRAFFIC_REDYEL      BITMAP                  "icons\\Toolbar 2\\traffic_redyel.bmp"
+IDB_TRAFFIC_YEL         BITMAP                  "icons\\Toolbar 2\\traffic_yel.bmp"
+IDB_TRAFFIC_OFF         BITMAP                  "icons\\Toolbar 2\\traffic_off.bmp"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOGEX 0, 0, 282, 162
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CAPTION | WS_TABSTOP
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Selected channels",IDC_STATIC,7,7,139,103
+    CONTROL         "EEG P10",IDC_CH0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,34,48,10
+    CONTROL         "EEG F8",IDC_CH1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,55,48,10
+    CONTROL         "EEG FP2",IDC_CH2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,77,48,10
+    CONTROL         "EEG FP1",IDC_CH3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,34,48,10
+    CONTROL         "EEG F7",IDC_CH4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,55,48,10
+    CONTROL         "EEG P9",IDC_CH5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,77,48,10
+    GROUPBOX        "Battery type",IDC_STATIC,150,42,125,31,NOT WS_VISIBLE
+    COMBOBOX        IDC_BATTYPE,163,54,100,61,CBS_DROPDOWNLIST | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Serial port",IDC_STATIC,150,7,125,32
+    COMBOBOX        IDC_SERPORT,164,19,100,86,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Destination folder",IDC_STATIC,7,112,268,43
+    EDITTEXT        IDC_FNAME,15,121,227,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_FNAME_BUTTON,246,121,23,14,BS_CENTER | BS_VCENTER
+    EDITTEXT        IDC_DISKSPACE,15,138,254,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Sampling frequency (200 - 666 Hz)",IDC_STATIC,150,79,125,31
+    EDITTEXT        IDC_FSAMPLE,183,91,54,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Hz",IDC_STATIC,239,94,9,8
+END
+
+IDD_ANNOTATIONS DIALOGEX 0, 0, 282, 145
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CAPTION | WS_TABSTOP
+CAPTION "Annotations"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    RTEXT           "F2 =",IDC_STATIC,7,7,20,12,SS_CENTERIMAGE
+    RTEXT           "F3 =",IDC_STATIC,7,26,20,12,SS_CENTERIMAGE
+    RTEXT           "F4 =",IDC_STATIC,7,45,20,12,SS_CENTERIMAGE
+    RTEXT           "F5 =",IDC_STATIC,7,64,20,12,SS_CENTERIMAGE
+    RTEXT           "F6 =",IDC_STATIC,7,83,20,12,SS_CENTERIMAGE
+    RTEXT           "F7 =",IDC_STATIC,7,102,20,12,SS_CENTERIMAGE
+    RTEXT           "F8 =",IDC_STATIC,7,121,20,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_AN1,29,7,246,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AN2,29,26,246,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AN3,29,45,246,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AN4,29,64,246,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AN5,29,83,246,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AN6,29,102,246,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AN7,29,121,246,14,ES_AUTOHSCROLL
+END
+
+IDD_RECORDINGINFORMATION DIALOGEX 0, 0, 202, 281
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Recording Information"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ADMINISTRATIONCODE,63,17,125,14
+    EDITTEXT        IDC_TECHNICIAN,63,33,125,14
+    EDITTEXT        IDC_DEVICE,63,49,125,14
+    EDITTEXT        IDC_COMMENTS,63,66,125,38,ES_MULTILINE | ES_AUTOVSCROLL
+    EDITTEXT        IDC_ELECTRODES,14,140,174,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADDITIONALCOMMENTS,14,195,174,38,ES_MULTILINE | ES_AUTOVSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,82,256,54,18
+    PUSHBUTTON      "Cancel",IDCANCEL,141,256,54,18
+    LTEXT           "EEG Number",IDC_STATIC,15,17,45,14,SS_CENTERIMAGE
+    LTEXT           "Technician",IDC_STATIC,15,33,44,14,SS_CENTERIMAGE
+    LTEXT           "Comments",IDC_STATIC,15,66,42,38,SS_CENTERIMAGE
+    LTEXT           "Device",IDC_STATIC,15,49,35,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_CHARSREMAINING2,14,236,174,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Additional Comments",IDC_STATIC,7,182,188,71
+    GROUPBOX        "Basic Information",IDC_STATIC,7,7,188,119
+    EDITTEXT        IDC_CHARSREMAINING1,14,107,174,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Electrode Type",IDC_STATIC,7,129,188,49
+    EDITTEXT        IDC_CHARSREMAINING3,14,159,174,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+END
+
+IDD_PATIENTINFO DIALOGEX 0, 0, 316, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Patient Information"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NAME,43,7,266,14
+    EDITTEXT        IDC_PIC,43,26,266,14
+    EDITTEXT        IDC_BDATEDAY,43,45,19,14,ES_NUMBER
+    COMBOBOX        IDC_BDATEMONTH,65,45,39,102,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_BDATEYEAR,107,45,29,14,ES_NUMBER
+    CONTROL         "&Unknown",IDC_SEXU,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,43,64,52,14
+    CONTROL         "&Female",IDC_SEXF,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,99,64,38,14
+    CONTROL         "&Male",IDC_SEXM,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,142,64,34,14
+    DEFPUSHBUTTON   "OK",IDOK,195,99,54,18
+    PUSHBUTTON      "Cancel",IDCANCEL,255,99,54,18
+    EDITTEXT        IDC_CHARSREMAINING,7,82,302,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Name",IDC_STATIC,7,7,22,16,SS_CENTERIMAGE
+    LTEXT           "P.I.C.",IDC_STATIC,7,26,24,16,SS_CENTERIMAGE
+    LTEXT           "Birthdate",IDC_STATIC,7,45,34,16,SS_CENTERIMAGE
+    LTEXT           "Gender",IDC_STATIC,7,64,27,14,SS_CENTERIMAGE
+    LTEXT           "(e.g. 11 NOV 1952)",IDC_STATIC,139,45,68,16,SS_CENTERIMAGE
+END
+
+IDD_SCREENSIZE DIALOGEX 0, 0, 282, 145
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CAPTION | WS_TABSTOP
+CAPTION "Viewable Screen Size"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Width (mm)",IDC_STATIC,105,27,54,8,NOT WS_VISIBLE
+    LTEXT           "Height (mm)",IDC_STATIC,106,50,55,8
+    EDITTEXT        IDC_SCREENWIDTH,149,24,40,14,ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE
+    CONTROL         "",IDC_SCREENWIDTHSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_HOTTRACK | NOT WS_VISIBLE,189,24,11,14
+    EDITTEXT        IDC_SCREENHEIGHT,149,47,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SCREENHEIGHTSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_HOTTRACK,189,47,11,14
+    CONTROL         "",IDC_VERTICALRULER,"Static",SS_OWNERDRAW,42,7,16,118
+    CONTROL         "",IDC_HORIZONTALRULER,"Static",SS_OWNERDRAW | NOT WS_VISIBLE,62,125,213,13
+    LTEXT           "Adjust the height value so that the lines align\nwith the cm markings of a ruler.",IDC_STATIC,71,82,197,18
+END
+
+IDD_SSHCONFIG DIALOGEX 0, 0, 282, 168
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CAPTION | WS_TABSTOP
+CAPTION "SSH Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Automatically upload EDF+ file a the end of the recording",IDC_AUTOMATICUPLOAD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,17,199,10
+    EDITTEXT        IDC_SSHHOSTNAME,56,40,157,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SSHPORT,240,40,28,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SSHREMOTEPATH,56,57,212,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Username and Password",IDC_SSHUSERPWD,95,73,94,14
+    EDITTEXT        IDC_SSHCONNTIMEOUT,79,104,189,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SSHLOWSPEEDLIMIT,79,123,66,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SSHLOWSPEEDTIME,209,123,59,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Options",IDC_STATIC,7,93,268,48
+    GROUPBOX        "Server Configuration",IDC_SSHSERVERCONFIG,7,30,268,60
+    LTEXT           "Host Name",IDC_STATIC,9,41,39,12,SS_CENTERIMAGE
+    LTEXT           "Remote Path",IDC_STATIC,9,58,44,12,SS_CENTERIMAGE
+    LTEXT           "Port #",IDC_STATIC,217,41,21,12,SS_CENTERIMAGE
+    LTEXT           "Connection Timeout",IDC_STATIC,9,105,67,12,SS_CENTERIMAGE
+    LTEXT           "Low Speed Limit",IDC_STATIC,9,124,67,12,SS_CENTERIMAGE
+    LTEXT           "Low Speed Time",IDC_STATIC,153,124,55,12,SS_CENTERIMAGE
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 326, 222
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About EEGEM"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,269,201,50,14
+    ICON            IDI_ICON,IDC_STATIC,7,7,20,20
+    LTEXT           "EEG in Emergency Medicine (EEGEM) Recording Software",IDC_STATIC,38,7,281,8
+    LTEXT           "Version 4.0.0",IDC_STATIC,38,16,281,8
+    LTEXT           "Credits:",IDC_STATIC,7,44,37,8
+    DEFPUSHBUTTON   "View Licenses",IDC_VIEWLICENSES,7,201,50,14
+    CONTROL         "",IDC_EXTLIBRARIES,"RichEdit20W",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,54,312,144
+    CONTROL         "<a href=""http://www.tut.fi/elt"">Department of Electronics and Communications Engineering</a>",IDC_SYSLINK1,
+                    "SysLink",WS_TABSTOP,38,25,281,10
+    CONTROL         "Copyright (C) 2008-2013 <a href=""http://www.tut.fi"">Tampere University of Technology</a>",IDC_SYSLINK2,
+                    "SysLink",WS_TABSTOP,38,35,281,10
+END
+
+IDD_STREAMINGCONFIG DIALOGEX 0, 0, 282, 168
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CAPTION | WS_TABSTOP
+CAPTION "Streaming Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STREAMINGSERVERIPv4,"SysIPAddress32",WS_TABSTOP,71,41,100,15
+    EDITTEXT        IDC_STREAMINGSERVERPORT,71,61,196,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Username and Password",IDC_STREAMINGUSERPWD,95,79,94,14,NOT WS_VISIBLE
+    EDITTEXT        IDC_MAXNSENDMSGFAILURES,96,117,171,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MAXNWAIT4REPLYFAILURES,96,136,171,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Options",IDC_STATIC,7,105,268,55
+    GROUPBOX        "Server Configuration",IDC_SSHSERVERCONFIG,7,30,268,69
+    LTEXT           "Server IP addr.",IDC_STATIC,9,42,61,12,SS_CENTERIMAGE
+    LTEXT           "Port #",IDC_STATIC,9,61,42,12,SS_CENTERIMAGE
+    LTEXT           "MaxNSendMsgFailures",IDC_STATIC,11,116,74,12,SS_CENTERIMAGE
+    LTEXT           "MaxNWait4ReplyFailures",IDC_STATIC,11,136,81,12,SS_CENTERIMAGE
+    CONTROL         "Streaming enabled",IDC_STREAMINGENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,14,75,10
+END
+
+IDD_INTERNETCONFIG DIALOGEX 0, 0, 282, 168
+STYLE DS_SETFONT | DS_NOIDLEMSG | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CAPTION | WS_TABSTOP
+CAPTION "Internet Connection Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Execute script at start of recording (occurs after connection is established)",IDC_ICC_EXECCONNSCRIPT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,104,255,10
+    EDITTEXT        IDC_ICC_CONNSCRIPT_FILE,20,116,248,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Dial following connection at start of recording:",IDC_ICC_DIALCONN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,12,163,10
+    LISTBOX         IDC_ICC_CONNECTIONSLISTBOX,12,25,256,71,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_ANNOTATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_RECORDINGINFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 274
+    END
+
+    IDD_PATIENTINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_SCREENSIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_SSHCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_STREAMINGCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_INTERNETCONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Errors",                     IDM_ERRORS
+        MENUITEM SEPARATOR
+        MENUITEM "&Quit",                       IDM_QUIT
+    END
+    POPUP "&Measurement"
+    BEGIN
+        MENUITEM "&Start\tCtrl+S",              IDM_SAMPLE_START
+        MENUITEM "&Stop\tCtrl+S",               IDM_SAMPLE_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Patient Information\tCtrl+P", IDM_PATIENTINFO
+        MENUITEM "&Recording Information\tCtrl+R", IDM_RECORDINGINFORMATION
+        MENUITEM SEPARATOR
+        MENUITEM "&Parameters\tCtrl+P",         IDM_PARAMETERS
+    END
+    POPUP "&Utilities"
+    BEGIN
+        MENUITEM "&EDF File Editor\tCtrl+E",    IDM_UTILITIES_EDFFILEEDITOR
+    END
+    MENUITEM "&About",                      IDM_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATORS ACCELERATORS
+BEGIN
+    "^P",           IDA_CTRLP,              ASCII,  NOINVERT
+    "^E",           IDA_CTRLE,              ASCII,  NOINVERT
+    "^R",           IDA_CTRLR,              ASCII,  NOINVERT
+    "^S",           IDA_CTRLS,              ASCII,  NOINVERT
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Finnish (Finland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FIN)
+LANGUAGE LANG_FINNISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x3L
+#else
+ FILEFLAGS 0x2L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Written by: Andrei D. Jakab"
+            VALUE "CompanyName", "Department of Electronics and Communications Engineering - Tampere University of Technology"
+            VALUE "FileDescription", "EEGEM Application"
+            VALUE "FileVersion", "4.0.0.0"
+            VALUE "InternalName", "EEGEM"
+            VALUE "LegalCopyright", "Copyright (C) 2008-2013 Tampere University of Technology"
+            VALUE "OriginalFilename", "EEGEM.exe"
+            VALUE "ProductName", "EEGEM Application"
+            VALUE "ProductVersion", "4.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Finnish (Finland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

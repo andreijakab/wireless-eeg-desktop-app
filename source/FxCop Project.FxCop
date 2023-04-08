@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="EEGEM Software Check">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/EDFFileEditor/bin/Release/EDFFileEditor.exe" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/InstallUSBDrivers/bin/Release/InstallUSBDrivers.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/Uninstall/bin/Release/Uninstall.exe" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Namespaces>
+   <Namespace Name="InstallUSBDrivers">
+    <Messages>
+     <Message Id="USB" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2008-12-03 14:30:32Z">
+      <Issue Name="Namespace">
+       <Item>USB</Item>
+       <Item>InstallUSBDrivers</Item>
+       <Item>Usb</Item>
+      </Issue>
+      <Notes>
+       <User Name="Andrei">
+        <Note Id="6" />
+       </User>
+      </Notes>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/EDFFileEditor/bin/Release/EDFFileEditor.exe">
+    <Modules>
+     <Module Name="edffileeditor.exe">
+      <Messages>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2008-12-03 13:44:53Z">
+        <Issue>
+         <Item>'EDFFileEditor.exe'</Item>
+        </Issue>
+       </Message>
+       <Message Id="EDF" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2008-12-03 13:44:53Z">
+        <Issue Name="Assembly">
+         <Item>EDF</Item>
+         <Item>'EDFFileEditor.exe'</Item>
+         <Item>Edf</Item>
+        </Issue>
+        <Notes>
+         <User Name="Andrei">
+          <Note Id="0" />
+         </User>
+        </Notes>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="FileConverter">
+        <Types>
+         <Type Name="EDF">
+          <Members>
+           <Member Name="#InvalidDateTime">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2008-12-03 13:44:53Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'EDF.InvalidDateTime'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SignalHeaders">
+            <Accessors>
+             <Accessor Name="#set_SignalHeaders(FileConverter.EDF+EDFSignalHeader[])">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2008-12-03 13:44:53Z">
+                <Issue>
+                 <Item>'EDF.SignalHeaders.set(EDF.EDFSignalHeader[])'</Item>
+                </Issue>
+                <Notes>
+                 <User Name="Andrei">
+                  <Note Id="7" />
+                 </User>
+                </Notes>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EDF+EDFSignalHeader">
+          <Members>
+           <Member Name="#.ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2008-12-03 13:44:53Z">
+              <Issue>
+               <Item>'EDF.EDFSignalHeader.EDFSignalHeader(string, string, string, int, int, int, int, string, int, string)'</Item>
+              </Issue>
+              <Notes>
+               <User Name="Andrei">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EDF+LocalPatientIdentification">
+          <Members>
+           <Member Name="#.ctor(System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2008-12-03 13:44:53Z">
+              <Issue>
+               <Item>'EDF.LocalPatientIdentification.LocalPatientIdentification(string)'</Item>
+              </Issue>
+              <Notes>
+               <User Name="Andrei">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EDF+LocalRecordingIdentification">
+          <Members>
+           <Member Name="#.ctor(System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2008-12-03 13:44:53Z">
+              <Issue>
+               <Item>'EDF.LocalRecordingIdentification.LocalRecordingIdentification(string)'</Item>
+              </Issue>
+              <Notes>
+               <User Name="Andrei">
+                <Note Id="7" />
+               </User>
+              </Notes>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="fclsMain">
+          <Messages>
+           <Message Id="fcls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2008-12-03 13:44:53Z">
+            <Issue Name="Type">
+             <Item>fcls</Item>
+             <Item>'fclsMain'</Item>
+             <Item>Fcls</Item>
+            </Issue>
+            <Notes>
+             <User Name="Andrei">
+              <Note Id="1" />
+             </User>
+            </Notes>
+           </Message>
+           <Message Id="fcls" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2008-12-03 13:44:53Z">
+            <Issue Name="Type">
+             <Item>fcls</Item>
+             <Item>'fclsMain'</Item>
+            </Issue>
+            <Notes>
+             <User Name="Andrei">
+              <Note Id="3" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/InstallUSBDrivers/bin/Release/InstallUSBDrivers.dll">
+    <Modules>
+     <Module Name="installusbdrivers.dll">
+      <Messages>
+       <Message Id="USB" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2008-12-03 14:30:32Z">
+        <Issue Name="Assembly">
+         <Item>USB</Item>
+         <Item>'InstallUSBDrivers.dll'</Item>
+         <Item>Usb</Item>
+        </Issue>
+        <Notes>
+         <User Name="Andrei">
+          <Note Id="5" />
+         </User>
+        </Notes>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="InstallUSBDrivers">
+        <Types>
+         <Type Name="Installer1">
+          <Members>
+           <Member Name="#IsProcessOpen(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2008-12-03 14:30:32Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'Installer1.IsProcessOpen(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/Uninstall/bin/Release/Uninstall.exe">
+    <Modules>
+     <Module Name="uninstall.exe">
+      <Messages>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2008-12-03 14:29:39Z">
+        <Issue>
+         <Item>'Uninstall.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Uninstall">
+        <Types>
+         <Type Name="fclsMain">
+          <Messages>
+           <Message Id="fcls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2008-12-03 14:29:39Z">
+            <Issue Name="Type">
+             <Item>fcls</Item>
+             <Item>'fclsMain'</Item>
+             <Item>Fcls</Item>
+            </Issue>
+            <Notes>
+             <User Name="Andrei">
+              <Note Id="2" />
+             </User>
+            </Notes>
+           </Message>
+           <Message Id="fcls" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2008-12-03 14:29:39Z">
+            <Issue Name="Type">
+             <Item>fcls</Item>
+             <Item>'fclsMain'</Item>
+            </Issue>
+            <Notes>
+             <User Name="Andrei">
+              <Note Id="4" />
+             </User>
+            </Notes>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#fclsMain_Load(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2008-12-03 14:29:39Z">
+              <Issue>
+               <Item>'fclsMain.fclsMain_Load(object, EventArgs)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'fclsMain.fclsMain_Load(object, EventArgs)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'fclsMain.fclsMain_Load(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Notes>
+   <User Name="Andrei">
+    <Note Id="0" Modified="2008-12-03 14:53:54Z">I like the naming the way it is right now.</Note>
+    <Note Id="1" Modified="2008-12-03 14:54:19Z">I have my own naming scheme.</Note>
+    <Note Id="2" Modified="2008-12-03 14:54:46Z">I have my own naming scheme.</Note>
+    <Note Id="3" Modified="2008-12-03 14:55:02Z">I have my own naming scheme.</Note>
+    <Note Id="4" Modified="2008-12-03 14:55:07Z">I have my own naming scheme.</Note>
+    <Note Id="5" Modified="2008-12-03 14:55:24Z">I have my own naming scheme.</Note>
+    <Note Id="6" Modified="2008-12-03 14:55:28Z">I have my own naming scheme.</Note>
+    <Note Id="7" Modified="2008-12-03 15:15:14Z">Code is there for future use.</Note>
+   </User>
+  </Notes>
+  <Rules>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Assembly">Correct the casing of '{0}' in assembly name {1} by changing it to '{2}'.</Resolution>
+    <Resolution Name="Namespace">Correct the casing of '{0}' in namespace name '{1}' by changing it to '{2}'.</Resolution>
+    <Resolution Name="Type">Correct the casing of '{0}' in type name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

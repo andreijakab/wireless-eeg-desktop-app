@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EEGEM", "eeg\Zigbee.vcxproj", "{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallUSBDrivers", "InstallUSBDrivers\InstallUSBDrivers.csproj", "{1129B7D7-6270-4131-934B-3E8B17FB37C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDFFileEditor", "EDFFileEditor\EDFFileEditor.csproj", "{CCD85629-6A29-471A-98F3-85898DF91F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uninstall", "Uninstall\Uninstall.csproj", "{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Debug|Win32.Build.0 = Debug|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Release|Win32.ActiveCfg = Release|Win32
+		{BBB3EE92-9CB0-4F6C-A0FC-BF225C45B4D3}.Release|Win32.Build.0 = Release|Win32
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1129B7D7-6270-4131-934B-3E8B17FB37C4}.Release|Win32.ActiveCfg = Release|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CCD85629-6A29-471A-98F3-85898DF91F66}.Release|Win32.ActiveCfg = Release|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{57B38EC1-F0E5-401A-ADF3-35AAF9D64DF1}.Release|Win32.ActiveCfg = Release|Any CPU
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Debug|Any CPU.ActiveCfg = Debug
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Debug|Any CPU.Build.0 = Debug
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Debug|Win32.ActiveCfg = Debug
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Debug|Win32.Build.0 = Debug
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Release|Any CPU.ActiveCfg = Release
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Release|Any CPU.Build.0 = Release
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Release|Mixed Platforms.ActiveCfg = Release
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Release|Win32.ActiveCfg = Release
+		{6FD2CCD2-72E5-4741-B195-4A1D0E2091D7}.Release|Win32.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		AMDCaProjectFile = C:\Documents and Settings\Andrei\My Documents\Visual Studio 2008\Projects\RGI\EEGEM\CodeAnalyst\EEGEM.caw
+	EndGlobalSection
+EndGlobal
